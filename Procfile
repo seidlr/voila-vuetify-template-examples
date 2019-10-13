@@ -1,0 +1,1 @@
+web: voila --port=$PORT --template vuetify-baseline --no-browser voila-vuetify-examples.ipynb
