@@ -1,0 +1,15 @@
+{% set base_url = open_url %}
+
+{% extends "base.html" %}
+
+{% block head %}
+  <meta http-equiv="refresh" content="1;url={{ base_url }}" />
+{% endblock %}
+
+{% block body %}
+  {% call spinner() %}
+    <h5>
+      This page should redirect you to voila. If it doesn't, <a href="{{ base_url }}">click here to go to voila</a>.
+    </h5>
+  {% endcall %}
+{% endblock %}

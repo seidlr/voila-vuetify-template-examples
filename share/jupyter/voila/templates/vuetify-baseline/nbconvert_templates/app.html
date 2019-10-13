@@ -1,0 +1,64 @@
+{% raw -%}
+<div id="app" style="display: none">
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      app
+    >
+        <jupyter-widget-mount-point mount-id="content-nav">
+            <v-container>
+                Placeholder for widget with mount id <i>content-nav</i>.
+            </v-container>
+        </jupyter-widget-mount-point>
+    </v-navigation-drawer>
+
+    <v-app-bar
+      app
+      color="indigo"
+      dark
+    >
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>Voila Vuetify Components</v-toolbar-title>
+    </v-app-bar>
+
+                <v-content>
+                    <jupyter-widget-mount-point mount-id="content-main">
+                            <v-container>
+                                    Placeholder for widget with mount id <i>content-main</i>.
+                            </v-container>
+                    </jupyter-widget-mount-point>
+                </v-content>
+    <v-footer
+      color="indigo"
+      app
+    >
+      <span class="white--text">&copy; 2019</span>
+    </v-footer>
+  </v-app>
+</div>
+
+<script>
+
+var app = new Vue({
+    vuetify: new Vuetify({
+        icons: {
+            iconfont: 'mdi',
+        },
+    }),
+    el: '#app',
+    mounted() {
+        document.querySelector('#app').removeAttribute("style");
+    },
+    data() {
+        return {
+            loading_text: "Loading page",
+            loadingPercentage: -1,
+            loading: true,
+            drawer: null
+        }
+    }
+});
+
+</script>
+{% endraw -%}
+
