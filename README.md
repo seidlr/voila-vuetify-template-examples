@@ -16,3 +16,12 @@ Or for the dark theme:
 voila voila-vuetify-examples.ipynb --template=vuetify-baseline --theme=dark
 ```
 
+## Deployment on Heroku
+You can easily deploy the notebook to Heroku following these steps: 
+First, follow the setup steps on Heroku: [here](https://devcenter.heroku.com/articles/getting-started-with-python)
+Then run
+```bash
+heroku create
+git push heroku master
+```
+
